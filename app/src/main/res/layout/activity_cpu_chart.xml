@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/chartTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="CPU Benchmark Results"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingBottom="10dp" />
+
+    <!-- Line Chart -->
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/chartTitle"
+        android:layout_above="@id/legendScrollView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_weight="1" />
+
+    <!-- Horizontal Scrollable Legend -->
+    <HorizontalScrollView
+        android:id="@+id/legendScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#F5F5F5"
+        android:fillViewport="true"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <!-- Legend Container -->
+        <LinearLayout
+            android:id="@+id/legendContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp" />
+
+    </HorizontalScrollView>
+
+</RelativeLayout>

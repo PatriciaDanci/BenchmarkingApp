@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Title Text -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Device Benchmark"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- CPU Benchmark Button -->
+    <Button
+        android:id="@+id/cpuBenchmarkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CPU Benchmark"
+        android:layout_below="@id/titleText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- GPU Benchmark Button -->
+    <Button
+        android:id="@+id/gpuBenchmarkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GPU Benchmark"
+        android:layout_below="@id/cpuBenchmarkButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp" />
+
+    <!-- Memory Benchmark Button -->
+    <Button
+        android:id="@+id/memoryBenchmarkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Memory Benchmark"
+        android:layout_below="@id/gpuBenchmarkButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp" />
+
+    <!-- Benchmarking History Button -->
+    <Button
+        android:id="@+id/historyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Benchmarking History"
+        android:layout_below="@id/overallScoreText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- Finalize Benchmark Button -->
+    <Button
+        android:id="@+id/finalizeBenchmarkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Finalize Benchmark"
+        android:layout_below="@id/memoryResultText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:enabled="false" />
+
+    <!-- Overall Score Text -->
+    <TextView
+        android:id="@+id/overallScoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Overall Score: Not computed"
+        android:textSize="18sp"
+        android:layout_below="@id/finalizeBenchmarkButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+
+    <!-- Results Title Text -->
+    <TextView
+        android:id="@+id/resultsTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Benchmark Results"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/memoryBenchmarkButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp" />
+
+    <!-- CPU Result Text -->
+    <TextView
+        android:id="@+id/cpuResultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CPU: Not tested"
+        android:layout_below="@id/resultsTitleText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp" />
+
+    <!-- GPU Result Text -->
+    <TextView
+        android:id="@+id/gpuResultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GPU: Not tested"
+        android:layout_below="@id/cpuResultText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp" />
+
+    <!-- Memory Result Text -->
+    <TextView
+        android:id="@+id/memoryResultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Memory: Not tested"
+        android:layout_below="@id/gpuResultText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/memoryResultText"
+        android:layout_marginTop="16dp"
+        android:visibility="gone" /> <!-- Initially hidden -->
+
+    <!-- Info Button -->
+    <Button
+        android:id="@+id/infoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Info"
+        android:layout_below="@id/historyButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+
+</RelativeLayout>

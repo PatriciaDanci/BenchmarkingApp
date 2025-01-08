@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <application
+        android:largeHeap="true"
+        android:hardwareAccelerated="true"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BenchmarkApp"
+        tools:targetApi="31">
+        <activity
+            android:name=".view.HistoryActivity"
+            android:exported="false" />
+        <activity android:name=".view.InfoActivity" />
+        <activity android:name=".view.info.CpuInfoUI" />
+        <activity android:name=".view.info.GpuInfoUI" />
+        <activity android:name=".view.info.MemoryInfoUI" />
+        <activity android:name=".view.info.BatteryInfoUI" />
+        <activity android:name=".view.info.OSInfoUI" />
+        <activity android:name=".view.info.DeviceInfoUI" />
+        <activity android:name=".view.CpuChartActivity" />
+        <activity android:name=".view.MemoryChartActivity" />
+        <activity
+            android:name=".view.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.BenchmarkApp">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
